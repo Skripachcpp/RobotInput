@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16175E52-4A39-4E03-BA63-28FF21C4CCF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkingTools</RootNamespace>
+    <AssemblyName>WorkingTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EmitMapper">
+      <HintPath>..\_References\packages\EmitMapper.1.0.0\lib\EmitMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\FtpProvider.cs" />
+    <Compile Include="Classes\FtpProviderPart\FtpProviderLite.cs" />
+    <Compile Include="Classes\FtpProviderPart\FtpRequestType.cs" />
+    <Compile Include="Classes\Cache.cs" />
+    <Compile Include="Classes\FileResist.cs" />
+    <Compile Include="FilesAndDirs\DirectoryWt.cs" />
+    <Compile Include="FilesAndDirs\FileWt.cs" />
+    <Compile Include="Map\Mapper.cs" />
+    <Compile Include="Parallel\Loop.cs" />
+    <Compile Include="Parallel\QueueTasks.cs" />
+    <Compile Include="Repository\FileRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\RepositoryAbstract.cs" />
+    <Compile Include="WinAPI\ServiceParts\ServiceAbstractLite.cs" />
+    <Compile Include="WinAPI\ServiceManager.cs" />
+    <Compile Include="WinAPI\ServiceParts\ServiceManagerExpand.cs" />
+    <Compile Include="WinAPI\ServiceAbstract.cs" />
+    <Compile Include="WinAPI\ServiceParts\ServiceManagerLite.cs" />
+    <Compile Include="Extensions\ArrayExtension.cs" />
+    <Compile Include="Extensions\BoolExtension.cs" />
+    <Compile Include="Extensions\GuigExtension.cs" />
+    <Compile Include="Extensions\IntExtension.cs" />
+    <Compile Include="Extensions\Maybe.cs" />
+    <Compile Include="Extensions\MemoryStreamExtension.cs" />
+    <Compile Include="Extensions\SerializeExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Extensions\Sugar.cs" />
+    <Compile Include="Extensions\TypeExtension.cs" />
+    <Compile Include="Factories\FtpWebRequestFacroty.cs" />
+    <Compile Include="Factories\FtpWebRequestFacrotyPart\FtpServerConnection.cs" />
+    <Compile Include="Factories\FtpWebRequestFacrotyPart\ServerConnection.cs" />
+    <Compile Include="Factories\WebRequestFactory.cs" />
+    <Compile Include="Factories\WebRequestFactoryPart\LoginPass.cs" />
+    <Compile Include="Factories\WebRequestFactoryPart\ProxySettings.cs" />
+    <Compile Include="CacheFactory.cs" />
+    <Compile Include="Parallel\Async.cs" />
+    <Compile Include="Parallel\Callback.cs" />
+    <Compile Include="Parallel\Pool.cs" />
+    <Compile Include="Parallel\PoolLite.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinAPI\Acces.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
